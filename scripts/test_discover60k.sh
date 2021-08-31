@@ -20,8 +20,8 @@ NUM_SAMPLES=10 # number of samples per input images
 CUDA_VISIBLE_DEVICES=${GPU_ID} python ./test.py \
   --dataroot ./datasets/${CLASS} \
   --results_dir ${RESULTS_DIR} \
-  --checkpoints_dir ./pretrained_models/ \
-  --name ${CLASS} \
+  --checkpoints_dir ../checkpoint \
+  --name ${CLASS}/${CLASS}_bicycle_gan \
   --dataset_mode ${CLASS} \
   --direction ${DIRECTION} \
   --load_size ${LOAD_SIZE} \
