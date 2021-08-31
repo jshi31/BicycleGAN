@@ -22,6 +22,7 @@ CUDA_VISIBLE_DEVICES=${GPU_ID} python ./test.py \
   --results_dir ${RESULTS_DIR} \
   --checkpoints_dir ./pretrained_models/ \
   --name ${CLASS} \
+  --dataset_mode ${CLASS} \
   --direction ${DIRECTION} \
   --load_size ${LOAD_SIZE} \
   --crop_size ${CROP_SIZE} \
