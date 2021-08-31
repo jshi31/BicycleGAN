@@ -1,4 +1,4 @@
 set -ex
-sudo -H pip install visdom
-sudo -H pip install dominate
-sudo -H pip install moviepy
+pip install visdom
+pip install dominate
+pip install moviepy
