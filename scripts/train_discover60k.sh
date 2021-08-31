@@ -32,4 +32,5 @@ CUDA_VISIBLE_DEVICES=${GPU_ID} python ./train.py \
   --niter ${NITER} \
   --niter_decay ${NITER_DECAY} \
   --use_dropout \
-  --dataset_mode ${CLASS}
+  --dataset_mode ${CLASS} \
+  --display_port 78
