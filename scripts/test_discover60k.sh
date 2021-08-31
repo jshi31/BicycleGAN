@@ -1,8 +1,8 @@
 set -ex
 # models
 RESULTS_DIR='./results/discover60k'
-G_PATH='../checkpoint/discover60k/discover60k_bicycle_gan/latest_net_G.pth'
-E_PATH='../checkpoint/discover60k/discover60k_bicycle_gan/latest_net_E.pth'
+G_PATH='../checkpoints/discover60k/discover60k_bicycle_gan/latest_net_G.pth'
+E_PATH='../checkpoints/discover60k/discover60k_bicycle_gan/latest_net_E.pth'
 
 # dataset
 CLASS='discover60k'
@@ -20,7 +20,7 @@ NUM_SAMPLES=10 # number of samples per input images
 CUDA_VISIBLE_DEVICES=${GPU_ID} python ./test.py \
   --dataroot ./datasets/${CLASS} \
   --results_dir ${RESULTS_DIR} \
-  --checkpoints_dir ../checkpoint \
+  --checkpoints_dir ../checkpoints \
   --name ${CLASS}/${CLASS}_bicycle_gan \
   --dataset_mode ${CLASS} \
   --direction ${DIRECTION} \
