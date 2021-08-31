@@ -9,6 +9,12 @@ from util import html
 
 # options
 opt = TestOptions().parse()
+# dataset: discover60k
+opt.discover60k_kwargs = {
+    'input_dir': '/home/jshi31/dataset/discover60k/before',
+    'output_dir': '/home/jshi31/dataset/discover60k/after',
+    'anno_path': '/home/jshi31/dataset/discover60k/annotation/discover60k.json',
+}
 opt.num_threads = 1   # test code only supports num_threads=1
 opt.batch_size = 1   # test code only supports batch_size=1
 opt.serial_batches = True  # no shuffle
