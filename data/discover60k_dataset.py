@@ -23,11 +23,11 @@ class Discover60kDataset(BaseDataset):
         self.input_dir = opt.discover60k_kwargs['input_dir']
         self.output_dir = opt.discover60k_kwargs['output_dir']
         anno_path = opt.discover60k_kwargs['anno_path']
+        self.phase = opt.phase
         self.data = self.load_data(anno_path)
         assert(self.opt.load_size >= self.opt.crop_size)   # crop_size should be smaller than the size of loaded image
         self.input_nc = self.opt.output_nc if self.opt.direction == 'BtoA' else self.opt.input_nc
         self.output_nc = self.opt.input_nc if self.opt.direction == 'BtoA' else self.opt.output_nc
-        self.phase = opt.phase
 
     def load_data(self, anno_path):
         with open(anno_path) as f:
