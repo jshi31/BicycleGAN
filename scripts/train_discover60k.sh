@@ -1,13 +1,13 @@
 set -ex
 MODEL='bicycle_gan'
 # dataset details
-CLASS='edges2shoes'  # facades, day2night, edges2shoes, edges2handbags, maps
+CLASS='discover60k'  # facades, day2night, edges2shoes, edges2handbags, maps
 NZ=8
 NO_FLIP='--no_flip'
 DIRECTION='AtoB'
 LOAD_SIZE=256
 CROP_SIZE=256
-INPUT_NC=1
+INPUT_NC=3
 NITER=30
 NITER_DECAY=30
 
@@ -32,3 +32,4 @@ CUDA_VISIBLE_DEVICES=${GPU_ID} python ./train.py \
   --niter ${NITER} \
   --niter_decay ${NITER_DECAY} \
   --use_dropout
+  --dataset_mode ${CLASS}
