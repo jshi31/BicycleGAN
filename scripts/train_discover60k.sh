@@ -34,5 +34,5 @@ CUDA_VISIBLE_DEVICES=${GPU_ID} python ./train.py \
   --use_dropout \
   --dataset_mode ${CLASS} \
   --display_port 78 \
-  --batch_size 32 \
+  --batch_size 64 \
   --num_threads 16
