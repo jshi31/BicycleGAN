@@ -27,6 +27,10 @@ if __name__ == '__main__':
         'output_dir': '/home/jshi31/dataset/discover60k/after',
         'anno_path': '/home/jshi31/dataset/discover60k/annotation/discover60k.json',
     }
+    opt.fivek_kwargs = {            
+        'anno_dir': '/home/jshi31/dataset/FiveK/annotations',
+        'img_dir': '/home/jshi31/dataset/FiveK/images'
+    }
 
     dataset = create_dataset(opt)  # create a dataset given opt.dataset_mode and other options
     dataset_size = len(dataset)    # get the number of images in the dataset.
