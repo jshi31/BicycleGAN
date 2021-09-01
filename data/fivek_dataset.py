@@ -21,9 +21,9 @@ class FiveKDataset(BaseDataset):
         BaseDataset.__init__(self, opt)
         opt.discover60k_kwargs
         self.img_dir = opt.fivek_kwargs['img_dir']
-        anno_path = opt.fivek_kwargs['anno_path']
+        anno_dir = opt.fivek_kwargs['anno_dir']
         self.phase = opt.phase
-        self.data = self.load_data(anno_path)
+        self.data = self.load_data(anno_dir)
         assert(self.opt.load_size >= self.opt.crop_size)   # crop_size should be smaller than the size of loaded image
         self.input_nc = self.opt.output_nc if self.opt.direction == 'BtoA' else self.opt.input_nc
         self.output_nc = self.opt.input_nc if self.opt.direction == 'BtoA' else self.opt.output_nc
