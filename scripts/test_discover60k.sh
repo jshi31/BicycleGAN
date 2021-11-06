@@ -31,5 +31,4 @@ CUDA_VISIBLE_DEVICES=${GPU_ID} python ./test.py \
   --n_samples ${NUM_SAMPLES} \
   --center_crop \
   --no_flip \
-  --phase test \
-  --num_test 10000
+  --phase test 
