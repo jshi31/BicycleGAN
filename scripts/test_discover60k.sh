@@ -13,7 +13,7 @@ INPUT_NC=3  # number of channels in the input image
 
 # misc
 GPU_ID=1   # gpu id
-NUM_TEST=100 # number of input images duirng test
+NUM_TEST=6241 # number of input images duirng test
 NUM_SAMPLES=10 # number of samples per input images
 
 # command

@@ -62,7 +62,6 @@ for i, data in enumerate(islice(dataset, opt.num_test)):
             images.append(fake_B)
             names.append('random_sample%2.2d' % nn)
             gen_imgs.append(fake_B)
-    pdb.set_trace()
     # Compute LPIPS
     dist_sum = 0
     for i in range(len(gen_imgs) - 1):
